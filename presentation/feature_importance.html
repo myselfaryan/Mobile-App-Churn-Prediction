@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F8F9FA;
+        color: #202124;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        padding: 40px;
+      }
+      .header {
+        font-size: 36px;
+        font-weight: bold;
+        color: #1A73E8;
+        margin-bottom: 30px;
+      }
+      .visualization-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+      }
+      .visualization-container img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+      .insights-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .key-point {
+        background-color: rgba(26, 115, 232, 0.1);
+        border-left: 4px solid #1A73E8;
+        padding: 15px;
+        border-radius: 4px;
+        flex: 1;
+      }
+      .highlight {
+        color: #34A853;
+        font-weight: bold;
+      }
+      .feature-name {
+        color: #EA4335;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="header">Feature Importance Analysis</h1>
+      
+      <div class="visualization-container">
+        <img src="/home/ubuntu/presentation/random_forest_feature_importance.png" alt="Random Forest Feature Importance">
+      </div>
+      
+      <div class="insights-container">
+        <div class="key-point">
+          <h2 class="text-xl font-bold mb-2">Top Features</h2>
+          <p class="text-lg">The <span class="feature-name">recency</span> of user activity and <span class="feature-name">total time spent</span> in the app are the strongest predictors of churn.</p>
+        </div>
+        
+        <div class="key-point">
+          <h2 class="text-xl font-bold mb-2">Engagement Metrics</h2>
+          <p class="text-lg"><span class="feature-name">Sessions per week</span> and <span class="feature-name">average session duration</span> significantly impact retention, highlighting the importance of regular engagement.</p>
+        </div>
+        
+        <div class="key-point">
+          <h2 class="text-xl font-bold mb-2">User Preferences</h2>
+          <p class="text-lg"><span class="feature-name">Push notification settings</span> and <span class="feature-name">subscription type</span> are key indicators of user commitment and likelihood to remain active.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F8F9FA;
+        color: #202124;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        padding: 40px;
+      }
+      .header {
+        font-size: 36px;
+        font-weight: bold;
+        color: #1A73E8;
+        margin-bottom: 30px;
+      }
+      .content-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .visualizations-container {
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .visualization {
+        width: 550px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .visualization img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+      .text-container {
+        flex: 1;
+      }
+      .key-point {
+        background-color: rgba(26, 115, 232, 0.1);
+        border-left: 4px solid #1A73E8;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .metric-name {
+        color: #1A73E8;
+        font-weight: bold;
+      }
+      .metric-value {
+        color: #34A853;
+        font-weight: bold;
+      }
+      .negative {
+        color: #EA4335;
+      }
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .metric-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="header">Business Impact & ROI</h1>
+      
+      <div class="content-container">
+        <div class="visualizations-container">
+          <div class="visualization">
+            <img src="/home/ubuntu/presentation/dashboard_revenue_impact.png" alt="Revenue Impact">
+          </div>
+          <div class="visualization">
+            <img src="/home/ubuntu/presentation/dashboard_roi.png" alt="ROI">
+          </div>
+        </div>
+        
+        <div class="text-container">
+          <div class="key-point">
+            <h2 class="text-xl font-bold mb-2">Revenue Impact</h2>
+            <p class="text-lg">Implementing the improved onboarding strategy is projected to save <span class="metric-value">$101,538</span> in revenue by reducing churn by 3.73%.</p>
+          </div>
+          
+          <div class="key-point">
+            <h2 class="text-xl font-bold mb-2">Return on Investment</h2>
+            <p class="text-lg">The ROI for the improved onboarding strategy is <span class="metric-value negative">-18.77%</span> in the short term, but expected to become positive as retention compounds over time.</p>
+          </div>
+          
+          <div class="key-point">
+            <h2 class="text-xl font-bold mb-2">Key Business Metrics</h2>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="text-sm">Average Revenue Per User</div>
+                <div class="text-xl font-bold text-blue-600">$54.43</div>
+              </div>
+              <div class="metric-card">
+                <div class="text-sm">Customer Lifetime Value</div>
+                <div class="text-xl font-bold text-blue-600">$189.25</div>
+              </div>
+              <div class="metric-card">
+                <div class="text-sm">Monthly Revenue</div>
+                <div class="text-xl font-bold text-blue-600">$1.43M</div>
+              </div>
+              <div class="metric-card">
+                <div class="text-sm">Annual Revenue</div>
+                <div class="text-xl font-bold text-blue-600">$17.15M</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
